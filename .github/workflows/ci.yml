@@ -29,9 +29,9 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        platforms: linux/arm64/v8
+        platforms: linux/amd64,linux/arm64
         push: true
         tags: |
-          ${{ secrets.DOCKER_HUB_USERNAME }}/nut-upsd-aarch64:${{ env.DATE }}
-          ${{ secrets.DOCKER_HUB_USERNAME }}/nut-upsd-aarch64:latest
+          ${{ secrets.DOCKER_HUB_USERNAME }}/nut-upsd:${{ env.DATE }}
+          ${{ secrets.DOCKER_HUB_USERNAME }}/nut-upsd:latest
 
