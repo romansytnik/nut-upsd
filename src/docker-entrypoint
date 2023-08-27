@@ -19,6 +19,7 @@ EOF
 
 cat >/etc/nut/upsd.conf <<EOF
 LISTEN 0.0.0.0 3493
+MAXAGE $MAXAGE
 EOF
 
 cat >/etc/nut/upsd.users <<EOF
